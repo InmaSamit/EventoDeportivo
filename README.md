@@ -66,28 +66,28 @@ Esto devolverá un token con el formao ```Bearer das76tfdgasyudft8tdf``` que hab
 ## BBDD
 
 ```
-CREATE TABLE "events" (
-  "id" int NOT NULL AUTO_INCREMENT,
-  "name" varchar(255) NOT NULL,
-  "description" text NOT NULL,
-  "date" date NOT NULL,
-  "location" varchar(255) NOT NULL,
-  "type" enum('Triatlón','Duatlón','Acuatlón','Atletismo','Ciclismo','Natación','Otro') NOT NULL,
-  "organizator" varchar(255) NOT NULL,
-  PRIMARY KEY ("id")
+CREATE TABLE `events` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `date` date NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `type` enum('Triatlón','Duatlón','Acuatlón','Atletismo','Ciclismo','Natación','Otro') NOT NULL,
+  `organizator` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 );
 
-CREATE TABLE "users" (
-  "id" int NOT NULL AUTO_INCREMENT,
-  "name" varchar(100) NOT NULL,
-  "email" varchar(100) NOT NULL,
-  "phone" varchar(20) DEFAULT NULL,
-  "password" varchar(255) NOT NULL,
-  "role" enum('USER','ADMIN') DEFAULT 'USER',
-  PRIMARY KEY ("id"),
-  UNIQUE KEY "email" ("email")
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `role` enum('USER','ADMIN') DEFAULT 'USER',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
 );
 
-INSERT INTO users (name, email, phone, password, role) VALUES ('admin', 'admin@gmail.com', '123456789', '$2b$10$DvEP3kHJcNaWmF7kc2H1U.p2XpfMAQZSC.yQ6bqo/jCu2qHnbEH/a', 'ADMIN'
+INSERT INTO `users` (`name`, `email`, `phone`, `password`, `role`) VALUES ('admin', 'admin@gmail.com', '123456789', '$2b$10$DvEP3kHJcNaWmF7kc2H1U.p2XpfMAQZSC.yQ6bqo/jCu2qHnbEH/a', 'ADMIN'
 );
 ```
