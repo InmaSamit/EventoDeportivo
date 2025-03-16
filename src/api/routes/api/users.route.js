@@ -1,11 +1,11 @@
 //rutas
 const router = require('express').Router();
-const users = require('../../controllers/users.controller');
+const userController = require('../../controllers/users.controller');
 const {checkToken} = require('../../middleware/auth');
 
 //endpoints
-router.get('/profile',  checkToken, users.getProfile);
-router.post('/register', users.register);
-router.post('/login', users.login);
+router.get('/profile',  checkToken, userController.getProfile);
+router.post('/register', userController.register);
+router.post('/login', userController.login);
 
 module.exports = router;

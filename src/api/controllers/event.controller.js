@@ -98,7 +98,7 @@ const updateEvent = async (req, res) => {
   await body('date').isDate().withMessage('La fecha no tiene el formato correcto(YYYY-MM-DD)').run(req);
   await body('description').notEmpty().withMessage('La descripción es obligatoria').run(req);
   await body('location').notEmpty().withMessage('La localización es obligatoria').run(req);
-  await body('type').isIn('Triatlón','Duatlón','Acuatlón','Atletismo','Ciclismo','Natación','Otro').withMessage('Los tipos de evento pueden ser:(Triatlón,Duatlón,Acuatlón,Atletismo,Ciclismo,Natación,Otro').run(req);
+  await body('type').isIn(['Triatlón','Duatlón','Acuatlón','Atletismo','Ciclismo','Natación','Otro']).withMessage('Los tipos de evento pueden ser:(Triatlón,Duatlón,Acuatlón,Atletismo,Ciclismo,Natación,Otro').run(req);
   await body('organizator').notEmpty().withMessage('El organizador es obligatorio').run(req);
   
   // Comprobamos si hay errores em la validación

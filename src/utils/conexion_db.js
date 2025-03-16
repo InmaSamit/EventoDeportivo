@@ -11,6 +11,6 @@ const pool = mysql.createPool({
   dateStrings: true
 });
 
-console.log(`Server running http://localhost:fgdf`);
+console.log(`Server running!!`);
 
 module.exports = pool.promise();
