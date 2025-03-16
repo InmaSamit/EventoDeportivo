@@ -6,6 +6,11 @@ La aplicación se encuentra desplegada en
 https://eventodeportivo.onrender.com
 ```
 
+Y la bbdd se encuentra en:
+```
+mysql-2a5afc6a-eventodeportivo.e.aivencloud.com
+```
+
 ## Endpoints
 
 ### 👥 Rutas de Autenticación
