@@ -1,4 +1,5 @@
 //rutas
+const router = require('express').Router();
 const eventController = require('./../../controllers/event.controller');
 const {checkToken, checkOrganizator} = require('../../middleware/auth');
 
